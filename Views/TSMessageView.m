@@ -137,8 +137,8 @@ static NSMutableDictionary *_notificationDesign;
         self.backgroundImageView.autoresizingMask = (UIViewAutoresizingFlexibleWidth);
         [self addSubview:self.backgroundImageView];
         
-        UIColor *fontColor = [UIColor colorWithHexString:[current valueForKey:@"textColor"]
-                                                   alpha:1.0];
+        UIColor *fontColor = [UIColor TSColorWithHexString:[current valueForKey:@"textColor"]
+                                                     alpha:1.0];
         
         
         self.textSpaceLeft = 2 * TSMessageViewPadding;
@@ -150,7 +150,7 @@ static NSMutableDictionary *_notificationDesign;
         [self.titleLabel setTextColor:fontColor];
         [self.titleLabel setBackgroundColor:[UIColor clearColor]];
         [self.titleLabel setFont:[UIFont boldSystemFontOfSize:[[current valueForKey:@"titleFontSize"] floatValue]]];
-        [self.titleLabel setShadowColor:[UIColor colorWithHexString:[current valueForKey:@"shadowColor"] alpha:1.0]];
+        [self.titleLabel setShadowColor:[UIColor TSColorWithHexString:[current valueForKey:@"shadowColor"] alpha:1.0]];
         [self.titleLabel setShadowOffset:CGSizeMake([[current valueForKey:@"shadowOffsetX"] floatValue],
                                                     [[current valueForKey:@"shadowOffsetY"] floatValue])];
         self.titleLabel.numberOfLines = 0;
@@ -163,7 +163,7 @@ static NSMutableDictionary *_notificationDesign;
             _contentLabel = [[UILabel alloc] init];
             [self.contentLabel setText:content];
             
-            UIColor *contentTextColor = [UIColor colorWithHexString:[current valueForKey:@"contentTextColor"] alpha:1.0];
+            UIColor *contentTextColor = [UIColor TSColorWithHexString:[current valueForKey:@"contentTextColor"] alpha:1.0];
             if (!contentTextColor)
             {
                 contentTextColor = fontColor;
@@ -204,7 +204,7 @@ static NSMutableDictionary *_notificationDesign;
             [self.button setBackgroundImage:buttonBackgroundImage forState:UIControlStateNormal];
             [self.button setTitle:self.buttonTitle forState:UIControlStateNormal];
             
-            UIColor *buttonTitleShadowColor = [UIColor colorWithHexString:[current valueForKey:@"buttonTitleShadowColor"] alpha:1.0];
+            UIColor *buttonTitleShadowColor = [UIColor TSColorWithHexString:[current valueForKey:@"buttonTitleShadowColor"] alpha:1.0];
             if (!buttonTitleShadowColor)
             {
                 buttonTitleShadowColor = self.titleLabel.shadowColor;
@@ -212,7 +212,7 @@ static NSMutableDictionary *_notificationDesign;
             
             [self.button setTitleShadowColor:buttonTitleShadowColor forState:UIControlStateNormal];
             
-            UIColor *buttonTitleTextColor = [UIColor colorWithHexString:[current valueForKey:@"buttonTitleTextColor"] alpha:1.0];
+            UIColor *buttonTitleTextColor = [UIColor TSColorWithHexString:[current valueForKey:@"buttonTitleTextColor"] alpha:1.0];
             if (!buttonTitleTextColor)
             {
                 buttonTitleTextColor = fontColor;
@@ -243,8 +243,8 @@ static NSMutableDictionary *_notificationDesign;
                                                                0.0, // will be set later
                                                                screenWidth,
                                                                [[current valueForKey:@"borderHeight"] floatValue])];
-        self.borderView.backgroundColor = [UIColor colorWithHexString:[current valueForKey:@"borderColor"]
-                                                           alpha:1.0];
+        self.borderView.backgroundColor = [UIColor TSColorWithHexString:[current valueForKey:@"borderColor"]
+                                                                  alpha:1.0];
         self.borderView.autoresizingMask = (UIViewAutoresizingFlexibleWidth);
         [self addSubview:self.borderView];
         

@@ -17,7 +17,7 @@
 @implementation UIColor (MLColorAdditions)
 
 
-+ (UIColor *)colorWithHexString:(NSString *)hexString alpha:(CGFloat)alpha
++ (UIColor *)TSColorWithHexString:(NSString *)hexString alpha:(CGFloat)alpha
 {
     assert(7 == hexString.length);
     assert('#' == [hexString characterAtIndex:0]);
@@ -38,10 +38,10 @@
     NSScanner *blueScanner = [NSScanner scannerWithString:blueHex];
     [blueScanner scanHexInt:&blueInt];
     
-    return [UIColor colorWith8BitRed:redInt green:greenInt blue:blueInt alpha:alpha];
+    return [UIColor TSColorWith8BitRed:redInt green:greenInt blue:blueInt alpha:alpha];
 }
 
-+ (UIColor *)colorWith8BitRed:(NSInteger)red green:(NSInteger)green blue:(NSInteger)blue alpha:(CGFloat)alpha
++ (UIColor *)TSColorWith8BitRed:(NSInteger)red green:(NSInteger)green blue:(NSInteger)blue alpha:(CGFloat)alpha
 {
     return [UIColor colorWithRed:(float)red/255 green:(float)green/255 blue:(float)blue/255 alpha:alpha];
 }

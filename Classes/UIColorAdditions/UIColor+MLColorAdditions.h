@@ -16,7 +16,7 @@
 
 @interface UIColor (MLColorAdditions)
 
-+ (UIColor *)colorWithHexString:(NSString *)hexString alpha:(CGFloat)alpha;
-+ (UIColor *)colorWith8BitRed:(NSInteger)red green:(NSInteger)green blue:(NSInteger)blue alpha:(CGFloat)alpha;
++ (UIColor *)TSColorWithHexString:(NSString *)hexString alpha:(CGFloat)alpha;
++ (UIColor *)TSColorWith8BitRed:(NSInteger)red green:(NSInteger)green blue:(NSInteger)blue alpha:(CGFloat)alpha;
 
 @end
